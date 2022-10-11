@@ -1,30 +1,46 @@
-# Java payment form examples
+# Embedded-PaymentFormT1-Java
 
-## Introduction
+Ejemplo de formulario en JAVA.
 
-The code presented here is a demonstration of the implementation of the payment form integration in JAVA. It aims to ease its use and learning.
+## Requisitos Previos
 
-## Contents
+- Servidor Web
+- Java 7 o superior
+- Claves de Integración, Ver ejemplo.
 
-The Java packages contain these resources:
-* `src/main/resources/config.properties`: Contains a centralized configuration and initialisation file.
-* `src/main/resources/i18n`: Contains the different translation files for French, English, German and Spanish languages.
-* `src/main/java/com/lyra/examples/form/utils`: Contains a gateway utilitary class (for signature calculation, transaction ID generation and more) and an application utilitary class (for logger initialization and properties reading).
-* `src/main/java/com/lyra/examples/form/servlet`: This package contains the logic implementation of the payment examples.
+## 1) Descargar proyecto
 
-## Pages
+Descargar el proyecto .zip haciendo click Aquí o clonarlo desde Git.
 
-* `WebContent/order.jsp`: This file simulates a payment form to be sent to the gateway.
-* `WebContent/WEB-INF/form.jsp`: This is an intermediate redirection page. It displays the generated form for debug purposes.
-* `WebContent/return.jsp`: This is the return file at the end of the payment.
+git clone https://github.com/izipay-pe/Embedded-PaymentFormT1-Java.git
 
-## The first use
+## 2) Subir a un servidor web
 
-1. Fill the `src/main/resources/config.properties` by your actual values from your gateway Back Office and replace the cancel and return URL host by your web server host.
-2. Generate a war and deploy it to your JSP/Servlet web server.
-3. Access the `order.jsp` page from your browser.
-4. Follow the indications to perform a payment.
+Crearse una cuenta gratuita en 000webhost y subir el proyecto a la carpeta raiz del hosting public_html/ (Ya sea por el administrador de archivos o filezilla)
 
-## License
+Crearse un nuevo sitio.
+Seleccionar Administrar sitio web.
+Selccionar File Manager y luego Upload Files
 
-Each source file included in this distribution is licensed under the GNU GENERAL PUBLIC LICENSE (GPL 3.0). Please see LICENSE.txt for the full text of the GPL 3.0 license. It is also available through the world-wide-web at this URL: http://www.gnu.org/licenses/gpl.html.
+## 3) Configurar claves
+
+Editar el archivo keys.example.php
+
+// Identificador de su tienda
+IzipayController::setDefaultUsername("12345678");
+
+// Clave de Test o Producción
+IzipayController::setDefaultPassword("testpassword_111111111111111111111111111111111111");
+
+// Clave Pública de Test o Producción
+IzipayController::setDefaultPublicKey("2222222222222222222222222222222222222222222222222");
+
+// Clave HMAC-SHA-256 de Test o Producción
+IzipayController::setDefaultHmacSha256("33333333333333333333333333333333333333333333333");
+
+// URL del servidor de Izipay
+IzipayController::setDefaultEndpointApiRest("https://api.micuentaweb.pe");
+
+## 4) Implementar IPN
+
+Ver el ejemplo Aquí
