@@ -6,14 +6,14 @@ Ejemplo de formulario en JAVA.
 
 - Servidor Web
 - Java 7 o superior
-- Claves de Integración, Ver ejemplo.
+- Claves de Integración, [Ver ejemplo.](https://github.com/JunioratWork/Obtener_Credenciales#readme)
 
 ## 1) Descargar proyecto
 
-Descargar el proyecto .zip haciendo click Aquí o clonarlo desde Git.
-
+Descargar el proyecto .zip haciendo click [Aquí](https://github.com/izipay-pe/Embedded-PaymentFormT1-Java) o clonarlo desde Git.
+```sh
 git clone https://github.com/izipay-pe/Embedded-PaymentFormT1-Java.git
-
+``` 
 ## 2) Subir a un servidor web
 
 Crearse una cuenta gratuita en 000webhost y subir el proyecto a la carpeta raiz del hosting public_html/ (Ya sea por el administrador de archivos o filezilla)
@@ -24,23 +24,32 @@ Selccionar File Manager y luego Upload Files
 
 ## 3) Configurar claves
 
-Editar el archivo keys.example.php
+La información la puede obtener desde su Back Office Vendedor (Configuración --> Tienda --> Claves)
 
+Editar el archivo `config.properties`
+
+```sh
 // Identificador de su tienda
-IzipayController::setDefaultUsername("12345678");
+site_id=12345678
 
-// Clave de Test o Producción
-IzipayController::setDefaultPassword("testpassword_111111111111111111111111111111111111");
+// Clave de Test
+key_test=XXXXXXXXXXXXXXXXXXX
 
-// Clave Pública de Test o Producción
-IzipayController::setDefaultPublicKey("2222222222222222222222222222222222222222222222222");
+// Clave de Producción
+key_prod=XXXXXXXXXXXXXXXXXXX
 
-// Clave HMAC-SHA-256 de Test o Producción
-IzipayController::setDefaultHmacSha256("33333333333333333333333333333333333333333333333");
+// Método
+
+return_mode=POST
 
 // URL del servidor de Izipay
-IzipayController::setDefaultEndpointApiRest("https://api.micuentaweb.pe");
+gateway_url=https://api.micuentaweb.pe
+``` 
 
 ## 4) Implementar IPN
 
-Ver el ejemplo Aquí
+Ver el ejemplo [Aquí](https://github.com/izipay-pe/Redirect-PaymentForm-IpnT1-PHP)
+
+## 5) Ejemplo de formulario
+
+Ver el ejemplo [Aquí](https://prueba55.herokuapp.com/)
