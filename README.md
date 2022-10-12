@@ -6,7 +6,7 @@ Ejemplo de formulario en JAVA.
 
 - Servidor Web
 - Java 7 o superior
-- Claves de Integración, [Ver ejemplo.](https://github.com/JunioratWork/Obtener_Credenciales#readme)
+- Claves de Integración, [Ver ejemplo.](https://github.com/izipay-pe/obtener-credenciales-de-conexion)
 
 ## 1) Descargar proyecto
 
