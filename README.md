@@ -3,7 +3,7 @@
 Ejemplo de un formulario incrustado en JAVA, para poder ejecutar el siguiente ejemplo seguir los pasos del presente manual.
 
 <p align="center">
-  <img src="/image/imagenes-readme/formulario-incrustado.png?raw=true" alt="Formulario"/>
+  <img src="/src/main/resources/formulario_incrustado.png?raw=true" alt="Formulario"/>
 </p> 
 
 <a name="Requisitos_Previos"></a>
@@ -55,7 +55,7 @@ gateway_url=https://api.micuentaweb.pe
 
 El formulario de pago está listo, puede intentar realizar una transacción utilizando una tarjeta de prueba con la barra de herramientas de depuración (en la parte inferior de la página).
 
-  ![tarjeta](image/imagenes-readme/tarjetas-prueba.png)
+  ![tarjeta](src/main/resources/tarjetas_prueba.png)
 
 Para obtener más información, eche un vistazo a:
 
